@@ -1,0 +1,7 @@
+@import "{% static '/styles/global.css' %}";
+@import "{% static '/styles/superior.css' %}";
+@import "{% static '/styles/main.css' %}";
+@import "{% static '/styles/carrosel.css' %}";
+@import "{% static '/styles/swiper-bundle.min.css' %}";
+@import "{% static '/styles/sobre.css' %}";
+@import "{% static '/styles/rodape.css' %}";
