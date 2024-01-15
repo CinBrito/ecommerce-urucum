@@ -151,7 +151,7 @@ a {
     position: absolute;
     height: 547px;
     right: 0px;
-    top: 1280px;
+    top: 1180px;
     opacity: 0.8;
     mix-blend-mode: multiply;
     z-index: -1;
@@ -336,7 +336,7 @@ a {
 .sobre-items p {
     margin-top: 50px;
     padding: 80px;
-    max-width: 1000px;
+    max-width: 1200px;
     color: #f2f2f2;
     text-align: center;
     font-size: 25px;
@@ -508,7 +508,7 @@ a {
     opacity: 0;
     overflow: hidden;
     transition: .2s;
-    font-size: 20px;    
+    font-size: 21px;
 }
 
 
@@ -516,6 +516,38 @@ a {
     height: fit-content;
     opacity: 1;
     padding: 24px;
+}
+
+.cardapio-item {
+    display: flex;
+    gap: 52px;
+    height: 320px;
+    margin: 82px 52px 112px 82px;
+}
+
+.cardapio-item img {
+    width: auto;
+    height: 320px;
+}
+
+.cardapio-item p {
+    font-size: 22px;
+}
+.cardapio-item-detalhes {
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr 1fr;
+    gap: 22px;
+    width: 1200px;
+}
+
+.cardapio-subitem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardapio-subitem img {
+    width: auto;
+    height: 32px;
 }
 
 /**
