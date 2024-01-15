@@ -1,0 +1,142 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+
+    {% block content %}
+    <main id="faq" class="principal">
+        <h2>DÚVIDAS FREQUENTES</h2>
+        <div class="faq">
+        
+          <div class="duvida">
+            <h3>O que diferencia as marmitas veganas da Urucum?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">A Urucum se destaca pela simplicidade sem comprometimento. Os pratos congelados
+                são convenientes para o dia a dia, mas nunca abrem mão da qualidade e do sabor. Acreditamos
+                que a alimentação vegana pode ser acessível e deliciosa, sem a necessidade de sacrificar a excelência gastronômica.
+                Cada refeição é concebida com a intenção de proporcionar uma experiência sensorial completa,
+                combinando texturas e sabores de maneiras inovadoras que surpreendem até os paladares mais exigentes.</p>
+          </div>
+
+          <div class="duvida">
+            <h3>Como faço para realizar um pedido online?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Você pode entrar em contato conosco diretamente através do nosso WhatsApp para fazer
+                pedidos ou, se preferir, adicionar os pratos desejados ao carrinho e concluir a compra em nosso site.
+                Após a realização do pedido, você receberá um e-mail de confirmação com instruções detalhadas de pagamento.
+                Assim que o pagamento for confirmado, informaremos o prazo mínimo de entrega e eventuais taxas associadas.
+                Estamos comprometidos em proporcionar uma experiência de compra transparente e eficiente para garantir
+                sua satisfação.</p>
+          </div>
+
+          <div class="duvida">
+            <h3>Vocês entregam em toda a cidade do Rio de Janeiro?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Oferecemos entrega gratuita nos bairros do Flamengo, Catete, Laranjeiras, Botafogo e
+                Glória. Para os demais bairros da Zona Sul e Centro, aplicamos uma taxa de entrega de R$5,00. Além disso,
+                ampliamos nossa área de entrega para a Zona Norte do Rio, utilizando aplicativos de entrega, com taxas
+                variáveis conforme a localização.</p>
+          </div>
+
+          <div class="duvida">
+            <h3>Quais são os métodos de pagamento aceitos?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Atualmente, oferecemos a conveniência de pagamento por transferência, PIX ou boleto bancário.
+                Estamos em constante evolução e buscamos expandir nossas opções de pagamento para melhor atender às
+                necessidades dos nossos clientes. Fique atento, pois em breve planejamos incorporar novos métodos de
+                pagamento, proporcionando ainda mais praticidade e flexibilidade em sua experiência conosco.</p>
+          </div>
+
+          <div class="duvida">
+            <h3>Posso personalizar meu pedido de acordo com minhas preferências alimentares?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Com certeza! Em nossa empresa, valorizamos profundamente o cuidado com nossos clientes. Qualquer
+                informação sobre alergias ou preferências alimentares é fundamental e pode ser comunicada durante o pedido.
+                No caso de alergias, todas as medidas são rigorosamente tomadas para garantir a segurança, incluindo o
+                preparo em áreas separadas para evitar possíveis contaminações.
+                <br> <br>
+                Entendemos que o paladar é pessoal, e se houver alguma preferência específica em relação a determinado
+                ingrediente, estamos mais do que dispostos a sugerir alternativas ou, quando possível sem comprometer a
+                qualidade do prato, excluí-lo conforme sua preferência. Nosso objetivo é proporcionar uma experiência
+                gastronômica personalizada, atendendo às necessidades individuais de cada cliente.</p>
+          </div>
+
+          <div class="duvida">
+            <h3>Como são embaladas as marmitas para garantir a qualidade durante a entrega?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Nossas marmitas são embaladas com extrema atenção para garantir a máxima qualidade
+                durante a entrega. Utilizamos embalagens especialmente projetadas para preservar a frescura, o sabor e
+                a temperatura dos alimentos. Além disso, implementamos práticas de embalagem seguras e higiênicas para
+                garantir que cada refeição chegue até você em perfeitas condições. Nosso compromisso é assegurar que sua
+                experiência culinária seja impecável desde o momento da preparação até o momento em que você saboreia
+                cada deliciosa mordida.</p>
+          </div>
+
+          <div class="duvida">
+            <h3>Vocês fornecem informações nutricionais para os pratos?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Certamente! Em nosso cardápio, você pode verificar detalhadamente a quantidade de
+                macronutrientes de todas as nossas refeições, incluindo informações sobre proteínas, gorduras e carboidratos.
+                Estamos empenhados em fornecer transparência e conscientização sobre o valor nutricional de cada prato,
+                para que você possa fazer escolhas informadas de acordo com suas preferências e metas alimentares.
+                Acreditamos que conhecer os detalhes nutricionais contribui para uma experiência alimentar mais saudável
+                e personalizada.</p>
+          </div>
+
+          <div class="duvida">
+            <h3>Qual é o prazo de entrega médio para os pedidos?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Devido ao nosso compromisso com a preparação caseira, pessoal e individualizada de cada pedido, solicitamos um prazo
+                mínimo de <b>3 dias</b>. Contudo, é possível que tenhamos estoque disponível para pratos sem pedidos de alteração.
+                Recomendamos que, no momento do seu pedido, consulte a disponibilidade através do nosso Whatsapp para
+                garantir a melhor experiência possível. Estamos dedicados a atender às suas necessidades da maneira mais
+                eficiente e satisfatória, proporcionando refeições frescas e personalizadas.</p>
+          </div>
+          
+          <div class="duvida">
+            <h3>Posso agendar a entrega para um horário específico?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Sim. Só é preciso falar conosco através do nosso Whatsapp para agendar.</p>
+          </div>
+
+          <div class="duvida">
+            <h3>Vocês possuem opções de refeições para eventos ou festas?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Ainda não oferecemos opções específicas para eventos ou festas, mas estamos sempre
+                buscando expandir nosso cardápio e atender às necessidades diversificadas dos nossos clientes. Estamos
+                abertos a discutir opções personalizadas para eventos especiais e adaptar nossos pratos para tornar a
+                sua celebração única e memorável. Entre em contato conosco para explorarmos juntos as possibilidades e
+                criarmos uma experiência gastronômica que atenda perfeitamente às suas expectativas.</p>
+          </div>
+
+          <div class="duvida">
+            <h3>As refeições são realmente 100% livres de derivados de animais?</h3>
+            <img src="{% static '/assets/favicon/seta-para-baixo.png' %}" alt="seta para baixo">
+            <p class="paragrafo">Certamente! Todas as refeições oferecidas são cuidadosamente preparadas para serem
+                100% livres de derivados de animais, proporcionando uma opção deliciosa e ética para aqueles que buscam
+                uma dieta vegana. A nossa prioridade é garantir uma experiência culinária que atenda aos mais altos
+                padrões de qualidade, sustentabilidade e respeito pelos animais.</p>
+          </div>
+
+        </div> 
+    </main>
+
+    <section class="sobre" id="sobre">
+      <h2>POR QUÊ URUCUM?</h2>
+
+      <div class="sobre-items">
+          <img src="{% static '/assets/img/urucum.png' %}" alt="Urucum Fruto">
+
+          <p><strong>Uma Jornada Gastronômica Vegana Além do Convencional</strong><br>
+             No universo da gastronomia vegana, o restaurante Urucum se destaca como uma verdadeira joia, oferecendo uma
+              experiência única e diferenciada em comparação com seus concorrentes no segmento de comida congelada. O
+              nome "Urucum" não é apenas uma referência à semente de cor intensa, mas também simboliza a vibrante paleta
+              de sabores e a abordagem inovadora que o estabelecimento traz para a mesa. <br>
+
+             Ao contrário de muitos competidores que se limitam a uma única influência culinária, o Urucum celebra a
+              diversidade da culinária global. Seja um curry indiano, uma massa italiana, ou uma criação inspirada na
+              cozinha asiática, o menu diversificado reflete a riqueza de sabores provenientes de diferentes partes do
+              mundo, oferecendo aos clientes uma jornada gustativa única a cada refeição.</p>
+      </div>
+  </section>
+
+
+    {% endblock %}

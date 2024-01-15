@@ -1,0 +1,47 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+
+    {% block content %}
+    <main class="principal">
+        <h2>CARDÁPIO</h2>
+
+        <!-- PRATOS DO CARDÁPIO -->
+        {% for info in cards %}
+        <div class="cardapio-item">
+            <img src="{% static '/assets/img/pratos/card_01.jpg' %}" alt="refeicao">
+            <div class="cardapio-item-detalhes">
+                <h3>{{ info.nome }}</h3>
+                <p>{{ info.descricao }}</p>
+                <p>Peso: {{ info.peso }}g | Calorias: {{ info.calorias }}kcal | Carboidratos: {{ info.carbo }}g | Gorduras: {{ info.gorduras }}g | Proteínas: {{ info.proteinas }}g</p>
+                <div class="cardapio-subitem">
+                    <p>R$ {{ info.valor }}</p>
+                    <img src="{% static '/assets/favicon/adicionar-ao-carrinho.png' %}">
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </main>
+
+    <!-- SEÇÃO NOSSOS DIFERENCIAIS -->
+    <section class="sobre" id="sobre">
+        <h2>NOSSOS DIFERENCIAIS</h2>
+
+        <div class="sobre-items">
+            <img src="{% static '/assets/img/desenho_coz.png' %}" alt="Cozinheira">
+
+            <p>A excelência do Urucum se destaca desde a seleção minuciosa dos ingredientes. Ao invés de nos contentarmos
+                com opções convencionais, primamos pelo uso de ingredientes cuidadosamente escolhidos, reafirmando assim
+                nosso compromisso inabalável com a qualidade, elemento essencial em nossa proposta gastronômica.
+                Nossa equipe de chefs é composta por profissionais talentosos e apaixonados, empenhados em transformar
+                ingredientes aparentemente simples em verdadeiras obras-primas culinárias. Cada prato congelado é
+                meticulosamente concebido com a intenção de proporcionar uma experiência sensorial completa. Buscamos
+                inovação ao combinar texturas e sabores de maneiras surpreendentes, mesmo para os paladares mais exigentes.
+                No Urucum, acreditamos que a culinária vai além da simples alimentação; é uma celebração da arte e do
+                prazer gastronômico. Estamos dedicados a surpreender e encantar nossos clientes, elevando a experiência
+                culinária a novos patamares de sabor e sofisticação.</p>
+        </div>
+    </section>
+
+
+    {% endblock %}

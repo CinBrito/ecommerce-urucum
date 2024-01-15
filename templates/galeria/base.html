@@ -1,0 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urucum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="{% static 'styles/style2.css' %}">
+    <link rel="shortcut icon" href="{% static '/assets/favicon/favicon.png' %}" />
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="{% url 'index' %}">
+            <img src="{% static '/assets/favicon/marca.png' %}" alt="logo-urucum"></a>
+        </div>
+        <div class="menu_nav">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <ul class="nav nav-underline flex-column flex-sm-row">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">INÍCIO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">QUEM SOMOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#rodape">CONTATO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-light" href="{% url 'perfil' %}">INSCREVA-SE</a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="d-flex" role="search">
+                                <input class="form-control-lg me-2" type="search" placeholder="Pesquisar..."
+                                    aria-label="Search">
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"><h3><i class="bi bi-search" style="color: #731717"></i></h3></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                            <h3><i class="bi bi-cart3" style="color: #731717"></i></h3></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'perfil' %}" >
+                            <h3><i class="bi bi-person-circle" style="color: #731717"></i></h3></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="acesso_rapido">
+        <div class="acesso_rapido_margens">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="{% url 'ofertas' %}" class="acesso_rapido_item">
+                            <img src="{% static '/assets/favicon/etiqueta-de-desconto 2.png' %}" alt="ofertas">
+                            <h3>OFERTAS</h3>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="https://api.whatsapp.com/send/?phone=5521998003021&text&type=phone_number&app_absent=0"
+                            class="acesso_rapido_item">
+                            <img src="{% static '/assets/favicon/pedir-comida.png' %}" alt="pedidos">
+                            <h3>PEÇA JÁ</h3>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="{% url 'cardapio' %}" class="acesso_rapido_item">
+                            <img src="{% static '/assets/favicon/cardapio 1.png' %}" alt="cardapio">
+                            <h3>CARDÁPIO</h3>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/" class="acesso_rapido_item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                            <img src="{% static '/assets/favicon/carrinho-de-compras.png' %}" alt="carrinho">
+                            <h3>CARRINHO</h3>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="{% url 'duvidas' %}" class="acesso_rapido_item">
+                            <img src="{% static '/assets/favicon/question.png' %}" alt="carrinho">
+                            <h3>DÚVIDAS</h3>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/" class="acesso_rapido_item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img src="{% static '/assets/favicon/fast-delivery.png' %}" alt="delivery">
+                            <h3>ENTREGAS</h3>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="{% url 'perfil' %}" class="acesso_rapido_item">
+                            <img src="{% static '/assets/favicon/perfil.png' %}" alt="perfil">
+                            <h3>MEU PERFIL</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+
+        <!-- Imagens laterais -->
+        <span class="obj_lateral_topo">
+            <img src="{% static '/assets/img/obj_lateral_01_tempero.png' %}" class="obj_lateral_01_tempero" alt="tempero decor">
+            <img src="{% static '/assets/img/obj_lateral_04_cebola.jpg' %}" class="obj_lateral_04_cebola" alt="cebola decor">
+            <img src="{% static '/assets/img/obj_lateral_08_lentilha.png' %}" class="obj_lateral_08_lentilha" alt="Lentilhas">
+            <img src="{% static '/assets/img/obj_lateral_07_salsa.png' %}" class="obj_lateral_07_salsa" alt="Salsa">
+
+        </span>
+
+    </section>
+
+    {% block content %}{% endblock %}
+
+    {% include 'galeria/partials/_footer.html' %}
+
+</body>
+
+</html>
