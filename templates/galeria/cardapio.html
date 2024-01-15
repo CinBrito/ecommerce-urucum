@@ -8,7 +8,7 @@
         <!-- PRATOS DO CARDÁPIO -->
         {% for info in cards %}
         <div class="cardapio-item">
-            <img src="{% static '/assets/img/pratos/card_01.jpg' %}" alt="refeicao">
+            <img src="{% static '/assets/img/pratos/' %}{{info.foto}}" alt="refeicao">
             <div class="cardapio-item-detalhes">
                 <h3>{{ info.nome }}</h3>
                 <p>{{ info.descricao }}</p>
