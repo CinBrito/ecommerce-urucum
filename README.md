@@ -1,6 +1,6 @@
 # Urucum: E-Commerce Vegano 🌱
 
-Projeto de e-commerce elaborado como parte do meu aprendizado em Desenvolvimento Full Stack. Site adminstrado pelo framework Django visa poder cadastrar produtos e clientes, além de administrar vendas online. Estrutura de front desenvolvida com HTML e CSS prórprios e scripts em Java parcialmente desenvolvidos.
+Projeto de e-commerce elaborado como parte do meu aprendizado em Desenvolvimento Full Stack. Site adminstrado pelo framework Django visa poder cadastrar produtos e clientes, além de administrar vendas online. Estrutura de front desenvolvida com HTML e CSS prórprios e scripts em JS parcialmente desenvolvidos.
 
 ## Características Principais 🚀
 - **Python & Django:**
