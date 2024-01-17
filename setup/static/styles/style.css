@@ -322,27 +322,51 @@ a {
 /* SEÇÃO SOBRE */
 
 .sobre {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: normal;
+    align-content: normal;
     background: rgba(88, 22, 22, 0.60);
     padding-top: 96px;
     padding-left: 151px;
     padding-bottom: 96px;
 }
 
-.sobre h2 {
-    color: #f2f2f2;
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.sobre-imagem:nth-child(1) {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+    order: 0;
+  }
+
+.sobre-items:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    order: 0;
 }
 
 .sobre-items {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
     margin-left: 50px;
     margin-right: 265px;
-    gap: 100px;
+    gap: 50px;
+}
+
+.sobre-items h2 {
+    color: #f2f2f2;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
 }
 
 .sobre-items p {
@@ -358,10 +382,11 @@ a {
     /* 166.667% */
 }
 
-.sobre-items img {
+.sobre-imagem {
     margin-top: 50px;
     place-self: center;
     opacity: 75%;
+    max-width: 700px;
 }
 
 @media screen and (max-width: 1400px) {
@@ -380,7 +405,7 @@ a {
         gap: 0px;
     }
 
-    .sobre-items img {
+    .sobre-imagem  {
         max-width: 300px;
     }
 
@@ -534,6 +559,41 @@ a {
 }
 
 /*  CARDÁPIO  */
+.tags-cardapio {
+    display: flex;
+    padding-top: 50px;
+    font-size: 18px;
+}
+
+.tags-cardapio p {
+    padding: 4px;
+}
+
+.tags-lista {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.tag {
+    color: #731717;
+    background-color: transparent; /* rgba(227, 220, 220,0.5); */
+    border-radius: 4px;
+    border: solid 0.5px #731717;
+    list-style-type: none;
+    padding: 4px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tag:hover {
+    background-color: #731717;
+    border: solid 0.5px #731717;
+    color: #f2f2f2;
+}
+
 .cardapio-item {
     display: flex;
     gap: 52px;
@@ -688,24 +748,40 @@ a {
     font-size: 22px;
 }
 
+.formulario-perfil a {
+    color: #0D0D0D;
+    font-size: 18px;
+}
+
+.formulario-perfil a:hover {
+    color: #731717;
+    }
+
 .form-control {
     font-size: 20px;
 }
 
-#botao-entrar {
+.botao-perfil {
     color: #731717;
-    border-color: #731717;
     font-size: 20px;
+    background-color: transparent; /* rgba(227, 220, 220,0.5); */
+    border-radius: 4px;
+    border: solid 0.5px #731717;
+    list-style-type: none;
+    padding: 4px;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
 }
 
-#botao-entrar:active {
+.botao-pefil:active {
     color: #fff;
     background-color: #731717;
     border-color: #731717;
     shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
-#botao-entrar:hover {
+.botao-perfil:hover {
     color: #fff;
     background-color: #731717;
     border-color: #731717;

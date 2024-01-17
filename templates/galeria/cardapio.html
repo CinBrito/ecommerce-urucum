@@ -5,10 +5,25 @@
     <main class="principal">
         <h2>CARDÁPIO</h2>
 
+        <div class="tags-cardapio">
+            <p>Busque por Categoria</p>
+            <ul class="tags-lista">
+                <li class="tag">Fundamentais</li>
+                <li class="tag">Cumbucas</li>
+                <li class="tag">Salteados</li>
+                <li class="tag">Ensopados</li>
+                <li class="tag">Saladas</li>
+            </ul>
+        </div>
+
         <!-- PRATOS DO CARDÁPIO -->
         {% for info in cards %}
         <div class="cardapio-item">
-            <img src="{% static '/assets/img/pratos/' %}{{info.foto}}" alt="refeicao">
+            {% if info.foto == "" or info.foto == null %}
+
+            {% else %}
+                <img src="{{ info.foto.url }}" alt="refeicao">
+            {% endif %}
             <div class="cardapio-item-detalhes">
                 <h3>{{ info.nome }}</h3>
                 <p>{{ info.descricao }}</p>
@@ -43,10 +58,10 @@
 
     <!-- SEÇÃO NOSSOS DIFERENCIAIS -->
     <section class="sobre" id="sobre">
-        <h2>NOSSOS DIFERENCIAIS</h2>
+        <img class="sobre-imagem" src="{% static '/assets/img/desenho_maos.png' %}" alt="Cozinheira">
 
         <div class="sobre-items">
-            <img src="{% static '/assets/img/desenho_maos.png' %}" alt="Cozinheira">
+            <h2>NOSSOS DIFERENCIAIS</h2>
 
             <p>A excelência do Urucum se destaca desde a seleção minuciosa dos ingredientes. Ao invés de nos contentarmos
                 com opções convencionais, primamos pelo uso de ingredientes cuidadosamente escolhidos, reafirmando assim

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 def index(request):
-    """Dicionário chamado dados"""
+    """Dicionário chamado dados
     dados = {
         '1': {
             "nome": "Salada de Quinoa & Grão-de-Bico com Cogumelos",
@@ -16,7 +16,7 @@ def index(request):
             "nome": "Guisado de Tofu, Tomate & Pimentão com Arroz",
               "legenda": "Descrição Descrição Descrição"}
 
-    }
+    }"""
 
     return render(request, 'galeria/index.html', )
 

@@ -4,7 +4,7 @@
 {% block content %}
 <main id="perfil" class="principal">
   <h2>ÁREA DO CLIENTE</h2>
-  <div class="formulario-perfil">
+  <form class="formulario-perfil">
     <h3>Faça seu login</h3>
 
     <br>
@@ -18,32 +18,25 @@
       <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Senha">
     </div>
 
-    <!-- <div class="form-floating mb-3">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">E-mail</label>
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Senha">
-      <label for="floatingPassword">Senha</label>
-    </div> -->
+    <a href="/"><p>Esqueci minha senha</p></a>
 
     <br>
 
-    <button type="button" class="btn btn-outline-danger" id="botao-entrar">ENTRAR</button>
+    <a href="{% url 'meuperfil' %}"><button type="submit" class="botao-perfil">ENTRAR</button></a>
 
-  </div>
+  </form>
 
   <hr>
 
   <div class="formulario-perfil">
     <h3>Cadastre-se</h3>
     <br>
-    <div class="mb-3">
+    <form class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">E-mail</label>
       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
-    </div>
+    </form>
 
-    <div class="row mb-3">
+    <form class="row mb-3">
       <div class="col">
         <label for="exampleFormControlInput1" class="form-label">Nome</label>
         <input type="text" class="form-control" placeholder="Nome" aria-label="First name">
@@ -53,18 +46,18 @@
         <input type="text" class="form-control" placeholder="Sobrenome" aria-label="Last name">
       </div>
 
-    </div>
+    </form>
 
-    <div class="mb-3">
+    <form class="mb-3">
         <label for="inputPassword5" class="form-label">Senha</label>
         <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
         <div id="passwordHelpBlock" class="form-text">
           Sua senha deve ter de 8 a 20 caracteres, conter letras e números, e não deve conter espaços, caracteres
           especiais ou emojis.
         </div>
-    </div>
+    </form>
 
-    <div class="row mb-3">
+    <form class="row mb-3">
 
       <div class="col-md-6">
         <label for="inputAddress" class="form-label">Endereço</label>
@@ -76,9 +69,9 @@
         <input type="text" class="form-control" id="inputAddress2" placeholder="Apto 123, Bloco A">
       </div>
 
-    </div>
+    </form>
     
-    <div class="row mb-3">
+    <form class="row mb-3">
 
       <div class="col-md-6">
         <label for="inputCity" class="form-label">Bairro</label>
@@ -99,21 +92,21 @@
         </div>
       </div>
 
-    </div>    
+    </form>
 
     <br>
 
-    <button type="button" class="btn btn-outline-danger" id="botao-entrar">CADASTRAR</button>
+    <a href="{% url 'meuperfil' %}"><button type="submit" class="botao-perfil">CADASTRAR</button></a>
 
   </div>
 
 </main>
 
 <section class="sobre" id="sobre">
-  <h2>QUEM SOMOS</h2>
+  <img class="sobre-imagem" src="{% static '/assets/img/desenho_coz.png' %}" alt="Cozinheira">
 
   <div class="sobre-items">
-    <img src="{% static '/assets/img/desenho_coz.png' %}" alt="Cozinheira">
+    <h2>QUEM SOMOS</h2>
 
     <p>Prazer, somos a Urucum! Uma empresa que pensa que comer comida boa e sem crueldade animal pode ser
       gostoso e não precisa ser caro. Dispensamos cópias de pratos não-veganos porque há quem diga que só de
