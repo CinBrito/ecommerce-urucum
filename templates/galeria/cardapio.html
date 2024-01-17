@@ -14,14 +14,32 @@
                 <p>{{ info.descricao }}</p>
                 <p>Peso: {{ info.peso }}g | Calorias: {{ info.calorias }}kcal | Carboidratos: {{ info.carbo }}g | Gorduras: {{ info.gorduras }}g | Proteínas: {{ info.proteinas }}g</p>
                 <div class="cardapio-subitem">
-                    <p>R$ {{ info.valor }}</p>
-                    <img src="{% static '/assets/favicon/adicionar-ao-carrinho.png' %}">
+                    <p class="flex-items">R$ {{ info.valor }}</p>
+
+                    <!-- <div class="input-group">
+                        <button id="decrement">-</button>
+                        <input type="number" id="input" value="0" readonly>
+                        <button id="increment">+</button>
+                    </div> -->
+                    
+                    <div class="quantity buttons_added">
+	                    <input id="decrement" type="button" value="-" class="minus">
+                        <input id="input" type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="" readonly>
+                        <input id="increment" type="button" value="+" class="plus">
+                    </div>
+
+                    <img class="flex-items" src="{% static '/assets/favicon/adicionar-ao-carrinho.png' %}">
                 </div>
             </div>
         </div>
         {% endfor %}
 
     </main>
+
+    <span>
+        <img src="{% static '/assets/img/obj_lateral_10_pimenta.png' %}" class="obj_lateral_10_pimenta" alt="pimenta">
+        <img src="{% static '/assets/img/obj_lateral_11_limao.png' %}" class="obj_lateral_10_limao" alt="limao">
+    </span>
 
     <!-- SEÇÃO NOSSOS DIFERENCIAIS -->
     <section class="sobre" id="sobre">
