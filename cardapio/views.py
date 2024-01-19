@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from cardapio.models import Prato
+from urucum.models import Prato
 
 def cardapio(request):
     pratos = Prato.objects.all()

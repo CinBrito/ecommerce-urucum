@@ -5,221 +5,40 @@
     <main id="pratos" class="principal">
         <h2>NOSSOS PRATOS</h2>
 
-        <div class="grade_externa">
+        <div class="fb-container">
+            {% for info in cards %}
+            <div class="fb-container-item">
 
-        <div class="grade">
-            <div class="row">
-                <div class="col etiqueta">
+                <div class="card-prato">
                     <div class="flip-container">
                         <div class="flipper">
                             <div class="frente prato">
-                                <img src="{% static '/assets/img/pratos/card_01.jpg' %}" alt="refeicao">
-                                <h4>Salada de Quinoa & Grão-de-Bico com Cogumelos</h4>
+                                {% if info.foto == "" or info.foto == null %}
+
+                                {% else %}
+                                <img src="{{ info.foto.url }}" alt="refeicao">
+                                {% endif %}
+                                <h4>{{ info.nome }}</h4>
                             </div>
                             <div class="verso prato">
                                 <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Salada de Quinoa & Grão-de-Bico com Cogumelos</h4>
+                                <p> <strong>R$ {{ info.valor }}</strong> <br>{{ info.peso }}g<br>{{ info.calorias }}kcal<br>❄ Freezer-friendly</p>
+                                <h4>{{ info.nome }}</h4>
                             </div>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                                <img src="{% static '/assets/img/pratos/card_02.jpg' %}" alt="refeicao">
-                                <h4>Cumbuca de Quinoa & Couve-Flor com Pistachios</h4>
-                            </div>
-                            <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>22g proteína<br>478 calorias <br></p>
-                                <h4>Cumbuca de Quinoa e Couve-Flor com Pistachios</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                        <img src="{% static '/assets/img/pratos/card_03.jpg' %}" alt="refeicao">
-                        <h4>Chana Masala com Coentro, Caju & Arroz</h4>
-                    </div>
-                             <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Chana Masala com Coentro, Caju & Arroz</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                        <img src="{% static '/assets/img/pratos/card_04.jpg' %}" alt="refeicao">
-                        <h4>Dahl com Lentilhas Vermelhas & Arroz</h4>
-                    </div>
-                             <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Dahl com Lentilhas Vermelhas & Arroz</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
-
-        <div class="grade">
-            <div class="row">
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                                <img src="{% static '/assets/img/pratos/card_08.jpeg' %}" alt="refeicao">
-                                <h4>Salada Colorida com Tofu Crocante</h4>
-                            </div>
-                            <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br></p>
-                                <h4>Salada Colorida com Tofu Crocante</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                        <img src="{% static '/assets/img/pratos/card_09.jpeg' %}" alt="refeicao">
-                        <h4>Refogado Caribenho Refrescante</h4>
-                    </div>
-                             <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Refogado Caribenho Refrescante</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                        <img src="{% static '/assets/img/pratos/card_06.jpg' %}" alt="refeicao">
-                        <h4>Guisado de Tofu, Tomate & Pimentão com Arroz</h4>
-                    </div>
-                             <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Guisado de Tofu, Tomate & Pimentão com Arroz</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                        <img src="{% static '/assets/img/pratos/card_05.jpg' %}" alt="refeicao">
-                        <h4>Curry Africano com Arroz, Batata Doce & Couve</h4>
-                    </div>
-                             <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Curry Africano com Arroz, Batata Doce & Couve</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="grade">
-            <div class="row">
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                        <img src="{% static '/assets/img/pratos/card_10.jpeg' %}" alt="refeicao">
-                        <h4>Guisado de Abóbora com Quinoa & Espinafre</h4>
-                    </div>
-                             <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Guisado de Abóbora com Quinoa & Espinafre</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                        <img src="{% static '/assets/img/pratos/card_11.jpg' %}" alt="refeicao">
-                        <h4>Almôndegas com Arroz Basmati & Salada</h4>
-                    </div>
-                             <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Almôndegas com Arroz Basmati & Salada</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                        <img src="{% static '/assets/img/pratos/card_12.jpeg' %}" alt="refeicao">
-                        <h4>Cumbuca de Quinoa com Tofu, Cenoura & Couve Crespa</h4>
-                    </div>
-                             <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Cumbuca de Quinoa com Tofu, Cenoura & Couve Crespa</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col etiqueta">
-                    <div class="flip-container">
-                        <div class="flipper">
-                            <div class="frente prato">
-                        <img src="{% static '/assets/img/pratos/card_07.jpeg' %}" alt="refeicao">
-                        <h4>Purê de Feijões & Batatas com Cogumelos Assados ao Molho Balsâmico</h4>
-                    </div>
-                             <div class="verso prato">
-                                <img src="{% static '/assets/img/pratos/card_verso.png' %}" alt="fundo vermelho">
-                                <p> <strong>R$ 27</strong> <br>24g proteína<br>526 calorias <br>❄ Freezer-friendly</p>
-                                <h4>Purê de Feijões & Batatas com Cogumelos Assados ao Molho Balsâmico</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+            {% endfor %}
         </div>
     </main>
 
     <section class="sobre" id="sobre">
-        <h2>QUEM SOMOS</h2>
+        <img class="sobre-imagem" src="{% static '/assets/img/desenho_coz.png' %}" alt="Cozinheira">
 
         <div class="sobre-items">
-            <img src="{% static '/assets/img/desenho_coz.png' %}" alt="Cozinheira">
+            <h2>QUEM SOMOS</h2>
 
             <p>Prazer, somos a Urucum! Uma empresa que pensa que comer comida boa e sem crueldade animal pode ser
                 gostoso e não precisa ser caro. Dispensamos cópias de pratos não-veganos porque há quem diga que só de
