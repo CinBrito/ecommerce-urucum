@@ -3,7 +3,7 @@ from perfil.models import Cliente
 
 
 class ListandoClientes(admin.ModelAdmin):
-    list_display = ("id", "nome","sobrenome","email","bairro")
+    list_display = ("id", "nome","email","telefone","bairro")
     search_fields = ("nome","telefone","email")
     list_display_links = ("id", "nome")
     list_per_page = 10
