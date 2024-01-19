@@ -217,19 +217,35 @@ a {
 }
 
 /* INDEX SEÇÃO PRATOS */
-.grade_externa {
-    display: grid;
-    gap: 42px;
-    margin-bottom: 102px;
+.fb-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 2200px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 102px;
+    padding-top: 52px;
+    padding-left: 122px;
+    gap: 72px;
 }
 
-
-.grade {
-    margin-top: 52px;
-    margin-right: 265px;
-    margin-bottom: 72px;
+.fb-container-item  {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: content;
+    /* flex: 1 0 18%; */
+    height: 480px;
+    align-self: center;
+    order: 0;
 }
 
+.card-prato {
+    display: block;
+    width: 380px;
+    height: auto;
+}
 
 .prato {
     margin-top: 20px;
@@ -393,9 +409,17 @@ a {
     .sobre p {
         max-width: 800px;
     }
+
+    .fb-container {
+        max-width: 1300px;
+    }
 }
 
 @media screen and (max-width: 450px) {
+    .fb-container {
+        max-width: 400px;
+    }
+
     .sobre {
         margin: 0px;
         padding-left: 0px;
